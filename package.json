@@ -1,19 +1,15 @@
 {
-  "name": "redux-minimal",
+  "name": "react-redux-questionnaire",
   "version": "1.0.0",
-  "description": "Start building complex react-redux apps today, with this minimalist easy to understand starter kit (boilerplate)",
+  "description": "React Redux Questionnaire",
   "keywords": [
     "react",
-    "redux",
-    "minimal",
-    "starter kit",
-    "boilerplate"
+    "redux"
   ],
   "main": "index.js",
-  "homepage": "http://redux-minimal.js.org/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/catalin-luntraru/redux-minimal"
+    "url": "https://github.com/nileshbhosale/react-redux-questionnaire"
   },
   "scripts": {
     "start": "webpack-dev-server --inline --hot --history-api-fallback --host localhost --port 8080",
@@ -29,8 +25,8 @@
       "stage-3"
     ]
   },
-  "author": "Catalin Luntraru",
-  "license": "MIT",
+  "author": "Nilesh Bhosale",
+  "license": "GNU",
   "dependencies": {
     "material-ui": "^0.17.1",
     "react": "^15.4.2",

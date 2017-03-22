@@ -1,25 +1,21 @@
 import React, { PropTypes } from "react";
-import { Link } from "react-router";
-import { Button, Glyphicon } from "react-bootstrap";
 import { connect } from "react-redux";
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
 
 
-// User List Element component
+// Question Element component
 class Question extends React.Component {
 
 	  // constructor
   constructor(props) {
     super(props);
-
     // bind <this> to the event method
     this.handleChange = this.handleChange.bind(this);
-
   }
 
+  //handle change of answer
   handleChange(event){
   	// delete the user
     this.props.dispatch({

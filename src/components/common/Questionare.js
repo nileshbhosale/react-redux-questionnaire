@@ -1,11 +1,10 @@
 import React, { PropTypes } from "react";
-import { Link } from "react-router";
 import QuestionList from "./QuestionList";
 import Result from "./Result";
 import {Grid, Col, Row, PageHeader} from "react-bootstrap";
 
 
-// User List Element component
+// Questionnaire Element component
 export default class Questionare extends React.Component {
 
   // render

@@ -1,23 +1,15 @@
 import React, { PropTypes } from "react";
-import { Link } from "react-router";
-import { Button, Glyphicon } from "react-bootstrap";
-
 import { connect } from "react-redux";
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
-import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
-
 import Question from "./Question";
 import RaisedButton from 'material-ui/RaisedButton';
 
 const style = {
   margin: 12,
 };
-// User List Element component
+// Question List Element component
 class QuestionList extends React.Component {
 
-		  // constructor
+	// constructor
   constructor(props) {
     super(props);
 
@@ -26,12 +18,16 @@ class QuestionList extends React.Component {
     this.submitAnswers = this.submitAnswers.bind(this);
   }
 
+  //Clear all the answers and reset the data from file
   clearAnswers(event){
   	this.props.dispatch({type: 'FETCH_DATA'});
   }
+
+  //submit the answers
   submitAnswers(event){
   	this.props.dispatch({type: 'CALCULATE_RESULT'});
   }
+
   // render
   render() {
     return (
@@ -45,12 +41,11 @@ class QuestionList extends React.Component {
     					options={question.options}
     					value={question.value}/>
     					</div> 
-    		})
+    		})}
 
-    		}
-
-   			 <RaisedButton label="Submit" primary={true} style={style} onClick={this.submitAnswers} />
+   			<RaisedButton label="Submit" primary={true} style={style} onClick={this.submitAnswers} />
     		<RaisedButton label="Clear" style={style} onClick={this.clearAnswers}/>
+
     	</div>
     );
   }
@@ -58,8 +53,6 @@ class QuestionList extends React.Component {
 
 // export the connected class
 function mapStateToProps(state) {
-	console.log("asdasd");
-    console.log(state.data.questions);
   return {
     questions: state.data.questions,
   };
